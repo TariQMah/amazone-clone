@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(234,237, 237);
+  --amazon-color: #3f0f48;
+  --amazon-bgcolor: #cd9042
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header__logo{
+  width: 100px;
+  object-fit: contain;
+  margin:18px 20px 0 20px;
+}
+.header__search{
+display: flex;
+flex: 1;
+}
+.header__searchInput{
+height: 12px;
+padding:10px;
+border: none;
+width: 100%;
+
+}
+.header__searchIcon{
+  padding:5px;
+  height: 22px !important;
+  background-color: var(--amazon-bgcolor);
+}
+.header__nav{
+display: flex;
+justify-content: space-evenly;
+}
+.header__link{
+  color: #fff;
+  text-decoration: none;
+
+}
+.header__option{
+  display: flex;
+  flex-direction: column;
+  margin:0 10px 0 10px
+}
+.header__optionLineOne{
+font-size:10px
+}
+.header__optionLineTwo{
+font-size:13px;
+font-weight: 800px;
+}
+.header__optionBasket{
+display: flex;
+align-items: center;
+}
+.header_basketCount{
+  margin:0 10px 0 10px;
+  
+}
+.home{
+  margin: 0 auto;
+  max-width: 1500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner img{
+width: 100%;
+mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+max-width: 1500px;
+z-index: -1;
+margin: 0 auto -150px;
 }
+.home__row{
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.product__rating{
+  display: flex;
+}
+.product{
+  background: #fff;
+  padding:20px;
+  max-height: 400px;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1;
+  min-width:100px ;
+  display: flex;
+  margin:10px;
+  flex-direction: column;
+}
+.product img{
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin:0 0 15px 0
+}
+.product__info{
+  height: 100px;
+  margin-bottom: 15px;
+}
+.product__price{
+  margin-top: 5px;
+}
+.product > button {
+  background-color: var(--amazon-bgcolor);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+.checkout{
+display: flex;
+background: #fff;
+padding:20px;
+height: max-content;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.checkout__title{
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom:1px solid lightgray;
+}
+.checkout__ad{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.checkoutProduct{
+  display: flex;
+  margin:20px 0
+}
+.checkoutProduct__image{
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+.checkoutProduct__info{
+ padding-left: 20px; 
+}
+.checkoutProduct__info > button {
+  background-color: var(--amazon-bgcolor);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  margin-top: 10px;
+  color:#111
+}
+.checkoutProduct__rating{
+  display: flex;
+}
+.checkoutProduct__title{
+  font-size: 17px;
+  font-weight: 800;
+}
+.basket__products{}
+.checkout__right{}
+.checkout__left{}
+.subtotal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  padding:20px;
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.subtotal__gift{
+  display: flex;
+  align-items: center;
+}
+.subtotal__gift > input{
+  margin-right: 5px;
+}
+.subtotal > button{
+  background: var(--amazon-bgcolor);
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color:#111
+}
+.login{
+  background: white;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.login__container{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border:1px solid lightgray;
+}
+.login__logo{
+  width:100px;
+  margin:20px 0;
+  object-fit: contain;
+}
+.login__container > h1{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.login__container > form > h5{
+  margin-bottom: 5px;
+}
+.login__container > form > input{
+  margin-bottom: 5px;
+  height: 30px;
+  background-color: white;
+  width: 98%;
+}
+.login__container > p{
+  margin:15px 0 0 0;
+  font-size:12px;
+}
+.login__signInButton{
+  background: var(--amazon-bgcolor);
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login__registerButton{
+  background: gray;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color:gray;
 }
